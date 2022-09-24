@@ -1,0 +1,38 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+
+  public static int lonelyinteger(List<Integer> a) {
+                System.out.println("list: "+a.toString());
+                boolean found = true;
+                for (int x = 0; x < a.size(); x++) {
+                        found=true;
+                        for (int y = 0; y < a.size(); y++) {
+                                if (x == y) {
+                                        continue;
+                                }
+                                if (a.get(x).equals(a.get(y))) {
+                                        found = false;
+                                }
+                        }
+                        if(found){
+                                return a.get(x);
+                        }
+                }
+                return 0;
+        }
+
+}
+
+
