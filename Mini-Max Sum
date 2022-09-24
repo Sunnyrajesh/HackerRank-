@@ -1,0 +1,48 @@
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+       int i,j,b;
+      //rraylist<Integer> lis= new Arraylist<Integer>();
+       long[] a=new long[1000];
+       //t[] sum=new int[100];
+       long sum=0;
+       long as=0; 
+       long  min=0,max=0;
+       Scanner s = new Scanner(System.in);
+       for(i=0;i<5;i++)
+       {
+           a[i]=s.nextInt();
+           
+       }
+       for(i=0;i<5;i++)
+       {
+       as+=a[i];
+        }
+        for(i=0;i<5;i++)
+       {
+         max=min=as-a[0];
+        }
+         for(i=0;i<5;i++)
+       {
+         if(min>as-a[i])
+         {
+             min=as-a[i];
+             
+         }
+         if(max<as-a[i])
+         
+         {
+          max=as-a[i];
+         }
+        //ystem.out.println(min+" +max);
+        }
+        
+        System.out.println(min+" "+max);
+        
+} 
+ //stem.out.println(sum);
+}
+
