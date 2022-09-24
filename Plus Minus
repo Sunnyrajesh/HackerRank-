@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner s =new Scanner(System.in);
+        int n= s.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=s.nextInt();
+        }
+        //int =arr.length;
+        float pos=0,neg=0,nu=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]>0)
+            {
+                pos++;
+            }
+            if(arr[i]<0)
+            {
+                neg++;
+            }
+            if(arr[i]==0)
+            {
+                nu++;
+            }
+
+    }
+    
+          System.out.println(String.format("%.6f",pos/n));
+          System.out.println(String.format("%.6f",neg/n));
+          System.out.println(String.format("%.6f",nu/n));
+}
+}
