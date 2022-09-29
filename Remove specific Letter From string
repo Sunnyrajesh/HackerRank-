@@ -1,0 +1,20 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		String s= "SSunny";
+		Scanner sc =new Scanner(System.in);
+		char ch= sc.next().charAt(0);
+		String finalstr="";
+		int ss=s.length();
+		for(int i=0;i<ss;i++)
+		{
+		    if(s.charAt(i)!=ch)
+		    {
+		        finalstr=finalstr+s.charAt(i);
+		    }
+		}
+		
+		System.out.println(finalstr);
+	}
+}
