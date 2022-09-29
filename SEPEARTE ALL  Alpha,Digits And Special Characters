@@ -1,0 +1,37 @@
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+    Scanner sc = new Scanner (System.in);
+    String temp = "", Special_characters = "";
+    String str = "@@##$$^&*()_+=Sunny123";
+
+    int sum = 0;
+
+    for (int i = 0; i < str.length (); i++)
+      {
+	char ch = str.charAt (i);
+
+	if (Character.isDigit (str.charAt (i)))
+	  {
+	    sum = sum + Character.getNumericValue (str.charAt (i));
+	  }
+	else if (Character.isAlphabetic (ch))
+	  {
+	    temp += ch;
+	  }
+	else
+	  {
+	    Special_characters += ch;
+	  }
+      }
+      System.out.println("THE SUM OF THE NUMBERS IN THE STRING ARE " +sum);
+    System.out.println ("THE ALPHABETIS ARE " + temp);
+    System.out.println ("SPECIAL CHARACTERS  ARE " + Special_characters);
+
+
+  }
+
+}
